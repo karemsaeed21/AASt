@@ -591,37 +591,7 @@ int main()
         printf("You can register max. 4 courses\n");
     }
     registerCourses(sem, id);
-    if (sem == 3)
-    {
-        char *status = Get_Status_of("BA101-Calculus-1", studentID);
-        printf("\n%s\n", status);
-        if (strcmp(status, "Passed") == 0)
-        {
-            printf("1-BA201-Calculus-III\n2-BA203-Probability-and-Statistics\n");
-            free(status);
-            status = Get_Status_of("BA113-Physics", studentID);
-            printf("\n%s\n", status);
-            if (strcmp(status, "Passed") == 0)
-            {
-                printf("3-BA216-Advanced-Physics\n");
-                free(status);
-                status = Get_Status_of("CS111-Introduction-to-Computers", studentID);
-                printf("\n%s\n", status);
-                if (strcmp(status, "Passed") == 0)
-                {
-                    printf("4-CE216-Digital Logic Design\n5-CS202-Discrete Structures\n");
-                    free(status);
-                    status = Get_Status_of("CS143-Introduction-to-Problem-Solving-and-Programming", studentID);
-                    printf("\n%s\n", status);
-                    if (strcmp(status, "Passed") == 0)
-                    {
-                        printf("6-CS243-Object Oriented Programming\n");
-                        free(status);
-                        int num;
-                        printf("Enter the number of courses you want to register: \n");
-                        scanf("%d", &num);
-                    }
-                }
+    return 0;
             }
 // printf("Enter the number of courses you want to register: \n");
 // int num;
